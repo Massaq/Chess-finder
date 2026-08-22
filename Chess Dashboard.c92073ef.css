@@ -1,0 +1,281 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2c2116;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem 1rem;
+  font-family: Roboto, sans-serif;
+  display: flex;
+}
+
+.title {
+  color: #779556d9;
+  text-align: center;
+  text-shadow: 0 0 2px #0000004d;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.search {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.search input {
+  color: #ffffffd9;
+  background-color: #0003;
+  border: 1px solid #a88734;
+  border-radius: 3px;
+  width: 100%;
+  max-width: 25rem;
+  height: 3.5rem;
+  margin-right: 10px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  transition: all .3s;
+}
+
+.search input:focus {
+  background-color: #0006;
+  border: 1px solid #779556;
+  outline: none;
+}
+
+.btn_search {
+  color: #ffffffe6;
+  cursor: pointer;
+  background-color: #779556;
+  border: 1px solid #779556;
+  border-radius: 3px;
+  width: 8rem;
+  height: 3.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all .3s;
+}
+
+.btn_search:hover {
+  background-color: #5a7540;
+  border-color: #5a7540;
+  transform: scale(1.05);
+}
+
+.dashboard {
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 3rem;
+  display: flex;
+}
+
+.widget {
+  color: #ffffffd9;
+  backdrop-filter: blur(5px);
+  background-color: #0000004d;
+  border: 1px solid #a887344d;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px #0003;
+}
+
+.widget ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-widget {
+  border-color: #a88734cc;
+  align-items: center;
+  gap: 2rem;
+  display: flex;
+}
+
+.player_avatar {
+  object-fit: cover;
+  border: 2px solid #a8873480;
+  border-radius: 8px;
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 4px 8px #00000080;
+}
+
+.main-stats {
+  flex-grow: 1;
+}
+
+.ratings-grid {
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+  display: flex;
+}
+
+.rating-widget {
+  width: 100%;
+}
+
+.rating-widget.rapid {
+  border-top: 4px solid #779556;
+}
+
+.rating-widget.blitz {
+  border-top: 4px solid #d35400;
+}
+
+.rating-widget.bullet {
+  border-top: 4px solid #f1c40f;
+}
+
+.widget-title {
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px #000c;
+  border-bottom: 1px solid #ffffff1a;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  padding-bottom: .8rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.stat-row {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .8rem;
+  display: flex;
+}
+
+.stat-label {
+  color: #fff9;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.stat-item {
+  color: #fff;
+  text-shadow: 1px 2px 4px #000000e6;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.text-win {
+  color: #779556;
+}
+
+.text-loss {
+  color: #e74c3c;
+}
+
+.text-draw {
+  color: #95a5a6;
+}
+
+.chart-controls {
+  background-color: #0006;
+  border: 1px solid #a8873433;
+  border-radius: 8px;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: .3rem;
+  display: flex;
+}
+
+.btn-time {
+  color: #fff9;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  flex: 1;
+  padding: .3rem 0;
+  font-size: .8rem;
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.btn-time:hover {
+  color: #fff;
+  background-color: #ffffff1a;
+}
+
+.btn-time.active {
+  color: #fff;
+  background-color: #779556;
+  box-shadow: 0 2px 4px #0000004d;
+}
+
+.mini-canvas-container {
+  width: 100%;
+  height: 120px;
+  margin-top: .8rem;
+  position: relative;
+}
+
+.ratings-grid {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  display: grid;
+}
+
+@media (width <= 400px) {
+  .profile-widget {
+    text-align: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .player_avatar {
+    margin: 0 auto;
+  }
+
+  .main-stats {
+    width: 100%;
+  }
+
+  .search {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search input {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .btn_search {
+    width: 100%;
+  }
+
+  .widget {
+    min-width: 0;
+    padding: 1rem;
+  }
+}
+/*# sourceMappingURL=Chess Dashboard.c92073ef.css.map */
